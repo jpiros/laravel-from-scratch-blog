@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,17 +13,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="/css/album.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="/css/blog.css" rel="stylesheet">
   </head>
 
   <body>
 
-    @include ('layouts.nav')
-
     <div class="container">
-      @yield ('content')
+      @include ('layouts.nav')
     </div>
+
+    <main role="main" class="container">
+      <div class="row">
+        @yield ('content')
+
+        @include ('layouts.sidebar')
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
 
     @include ('layouts.footer')
   </body>
 </html>
+
